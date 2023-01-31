@@ -1,0 +1,9 @@
+**/node_modules
+**/dist
+**/yarn.lock
+**/yarn-error.log
+**/.nuxt
+**/package-lock.json
+**/modules.xml
+**/vcs.xml
+**/fib_dienstblatt.iml
