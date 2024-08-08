@@ -16,7 +16,7 @@ import { useComponentStore } from '@/store/componentStore';
 
 const { unit } = defineProps(['unit']);
 
-const name = $ref('');
+const name = ref('').value;
 const agentStore = useAgentStore();
 
 const close = (): void => {

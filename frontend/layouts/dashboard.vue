@@ -24,7 +24,7 @@ import '@/sockets/index';
 import { useAgentStore } from '@/store/agentStore';
 
 const router = useRouter();
-const tabs = $ref([
+const tabs = ref([
     { route: '/dashboard', class: 'fa-solid fa-house' },
     { route: '/dashboard/crimes', class: 'fa-solid fa-clipboard' },
     { route: '/dashboard/liability', class: 'fa-solid fa-newspaper' },
@@ -33,7 +33,7 @@ const tabs = $ref([
     { route: '/divisions/doc', class: 'fa-solid fa-file' },
     { route: '/dashboard/settings', class: 'fa-solid fa-gears' },
     { route: '/auth/logout', class: 'fa-solid fa-right-from-bracket' }
-]);
+]).value;
 
 const activeRoute = computed(() => router.currentRoute.value.fullPath);
 const agentStore = useAgentStore();

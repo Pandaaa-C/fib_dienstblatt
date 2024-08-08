@@ -55,8 +55,8 @@ const isEditorMode = $computed(() => useComponentStore().getEditorMode);
 const activityOptions = ['Streifendienst', 'HQ', 'Einsatz', 'Abteilung', 'Aktenklärung', 'Ausbildung', 'Einsatzleitung', 'Besprechung', 'Entführt', 'EST', 'Funk Aus', 'Büro', 'LSPD', 'Overwatch', 'Wanteds', 'Zivil', 'Parlament'];
 const vehicles = $computed(() => useVehicleStore().getVehicles);
 
-let agentName = $ref('');
-let agentLive = $ref(false);
+let agentName = ref('').value;
+let agentLive = ref(false).value;
 let currentActivity = unit.activity;
 let currentVehicleIndex = $computed(() => {
     return vehicles.findIndex(x => x.vehicleId == unit.vehicle)

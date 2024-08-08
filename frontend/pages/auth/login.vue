@@ -18,8 +18,8 @@ definePageMeta({
     middleware: ['router-check'],
 });
 
-const username: string = $ref('');
-const password: string = $ref('');
+const username: string = ref('').value;
+const password: string = ref('').value;
 const router = useRouter();
 
 const componentStore = useComponentStore();

@@ -15,8 +15,8 @@
 
 <script setup lang="ts">
 const { options, selectedIndexes, readonly } = defineProps(['options', 'selectedIndexes', 'readonly']);
-let isOpen = $ref(false);
-let filter = $ref('');
+let isOpen = ref(false).value;
+let filter = ref('').value;
 
 const toggleSelectionMenu = (): void => {
     if (!readonly) {

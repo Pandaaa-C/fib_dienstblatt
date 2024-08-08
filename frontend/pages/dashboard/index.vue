@@ -41,7 +41,7 @@ const isEditorMode = $computed(() => componentStore.getEditorMode);
 const isUnitMode = $computed(() => componentStore.getAddUnitMode);
 const isUnitUpdateMode = $computed(() => componentStore.getUpdateUnitMode);
 
-let updatingUnit = $ref<any>();
+let updatingUnit = ref<any>().value;
 
 const toggleAddUnitMode = (): void => {
     componentStore.setAddUnitMode(true);

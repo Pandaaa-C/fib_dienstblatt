@@ -13,7 +13,7 @@ import { useComponentStore } from '@/store/componentStore.js';
 
 let globalId = 0;
 
-const notifications = $ref<Notification[]>([]);
+const notifications = ref<Notification[]>([]).value;
 
 const pushNotification = (message: string): void => {
     const id = globalId++;

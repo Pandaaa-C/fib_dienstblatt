@@ -65,7 +65,7 @@ definePageMeta({
 const componentStore = useComponentStore();
 const agentStore = useAgentStore();
 
-const editingAgents = $ref<string[]>([]);
+const editingAgents = ref<string[]>([]).value;
 
 const sortedAgents = computed(() =>
     agentStore.getAgents.sort((a, b) => {
@@ -85,10 +85,10 @@ const dutyTime = (item: IAgentData): string => {
     return convertTime(item.dutyTime);
 };
 
-let agentName = $ref('');
-let agentRank = $ref<number>();
-let agentDN = $ref('');
-let agentPhone = $ref('');
+let agentName = ref('').value;
+let agentRank = ref<number>().value;
+let agentDN = ref('').value;
+let agentPhone = ref('').value;
 
 const toggleEditorMode = (id: string): void => {
     if(editingAgents.includes(id)) {

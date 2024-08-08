@@ -56,9 +56,9 @@ const canWatch = computed(() => {
     return agentStore.getAgentInfo.divisions != null && agentStore.getAgentInfo.divisions.includes(0);
 });
 
-const searchInput = $ref('');
-let addComponentActive = $ref(false);
-let viewComponentActive = $ref(false);
+const searchInput = ref('').value;
+let addComponentActive = ref(false).value;
+let viewComponentActive = ref(false).value;
 let viewComponentItem: any = null;
 
 const textContent = (item: IDocFileData): string => {

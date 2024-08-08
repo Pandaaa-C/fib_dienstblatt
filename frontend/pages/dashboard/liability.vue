@@ -57,11 +57,11 @@ const liabilityReductions = [
   '30 Hafteinheiten'
 ];
 
-const searchInput = $ref('');
-let name = $ref('');
-let liabilityReduction = $ref('');
-let jailTime = $ref(undefined);
-let reductionReason = $ref('');
+const searchInput = ref('').value;
+let name = ref('').value;
+let liabilityReduction = ref('').value;
+let jailTime = ref(undefined).value;
+let reductionReason = ref('').value;
 
 const liabilities = computed(() => {
   return searchInput.length < 1

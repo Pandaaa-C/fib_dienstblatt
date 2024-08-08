@@ -43,8 +43,8 @@ const componentStore = useComponentStore();
 const router = useRouter();
 
 // user stuff
-let passwordInput = $ref('');
-let passwordInput2 = $ref('');
+let passwordInput = ref('').value;
+let passwordInput2 = ref('').value;
 
 const changePassword = async (): Promise<void> => {
     if (passwordInput !== passwordInput2) {
@@ -73,11 +73,11 @@ const changePassword = async (): Promise<void> => {
 };
 
 // administration stuff
-let resetPasswordInput = $ref('');
-let vehicleAddName = $ref('');
-let vehicleAddId = $ref<number>();
-let factionName = $ref('');
-let factionShortName = $ref('');
+let resetPasswordInput = ref('').value;
+let vehicleAddName = ref('').value;
+let vehicleAddId = ref<number>().value;
+let factionName = ref('').value;
+let factionShortName = ref('').value;
 
 const resetPassword = async (): Promise<void> => {
     const response: { message: string } = (

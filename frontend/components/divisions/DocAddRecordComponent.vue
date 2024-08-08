@@ -46,9 +46,9 @@ const teams = [
     'Government'
 ];
 
-const name = $ref('');
+const name = ref('').value;
 let team = '';
-const info = $ref('');
+const info = ref('').value;
 
 const onSelectTeam = (index: number): void => {
     team = teams[index];

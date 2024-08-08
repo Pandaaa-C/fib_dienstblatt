@@ -15,8 +15,8 @@
 <script setup lang="ts">
 const { options, onSelect, currentIndex } = defineProps(['options', 'onSelect', 'currentIndex']);
 let activeIndex = computed(() => currentIndex);
-let isOpen = $ref(false);
-let filter = $ref('');
+let isOpen = ref(false).value;
+let filter = ref('').value;
 
 const open = (): void => {
     if (isOpen) return;

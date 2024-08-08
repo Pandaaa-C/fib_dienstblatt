@@ -22,7 +22,7 @@ definePageMeta({
 
 const agentStore = useAgentStore();
 const router = useRouter();
-let loaded = $ref(false);
+let loaded = ref(false).value;
 let logs = [];
 
 onMounted(() => {

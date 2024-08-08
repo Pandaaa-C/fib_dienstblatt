@@ -111,20 +111,20 @@ const teams = computed((): string[] => {
   return teams;
 });
 
-const searchInput = $ref('');
-let name = $ref('');
-let team = $ref('');
-let location = $ref('');
-let blackMoneyPerson = $ref<number>();
-let blackMoneyVehicle = $ref<number>();
-let blackMoneyHouse = $ref<number>();
-let bnc = $ref(false);
-let camper = $ref('');
-let mord = $ref(false);
-let illegalItems = $ref(false);
-let proof1 = $ref('');
-let proof2 = $ref('');
-let proof3 = $ref('');
+const searchInput = ref('').value;
+let name = ref('').value;
+let team = ref('').value;
+let location = ref('').value;
+let blackMoneyPerson = ref<number>().value;
+let blackMoneyVehicle = ref<number>().value;
+let blackMoneyHouse = ref<number>().value;
+let bnc = ref(false).value;
+let camper = ref('').value;
+let mord = ref(false).value;
+let illegalItems = ref(false).value;
+let proof1 = ref('').value;
+let proof2 = ref('').value;
+let proof3 = ref('').value;
 
 const crimes = computed(() => {
   return searchInput.length < 1
